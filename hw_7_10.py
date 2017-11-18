@@ -24,11 +24,11 @@ print(camelized_style[0].capitalize() + camelized_style[1].capitalize() + cameli
 
 #task_10
 #-------------------------------------------------
-Leo_Tolstoy ='Leo Tolstoy*1828-08-28*1910-11-20'.split('*')
-birth_date = Leo_Tolstoy[1].split("-")
-death_date = Leo_Tolstoy[2].split("-")
+leo_tolstoy ='Leo Tolstoy*1828-08-28*1910-11-20'.split('*')
+birth_date = leo_tolstoy[1].split("-")
+death_date = leo_tolstoy[2].split("-")
 age = int(death_date[0]) - int(birth_date[0])
-print(Leo_Tolstoy[0] + ' ' + str(age))
+print(leo_tolstoy[0] + ' ' + str(age))
 
 
 
