@@ -21,9 +21,7 @@ print('Do two given circles intersect in the plane?')
 def is_circles_intersect (x1, x2, r1, y1, y2, r2):
     distance_between_centres = math.sqrt((y1 - x1)**2 + (y2 - x2)**2)
     sum_of_radiuses = r1 + r2
-    if distance_between_centres > sum_of_radiuses:
-        return False
-    elif distance_between_centres < sum_of_radiuses:
+    if distance_between_centres > sum_of_radiuses or distance_between_centres < abs(r1 - r2):
         return False
     else:
         return True
@@ -31,6 +29,7 @@ def is_circles_intersect (x1, x2, r1, y1, y2, r2):
 
 result1 = is_circles_intersect(0, 0, 5, 0, 0, 4)
 print(result1)
+
 
 
 #task_16
