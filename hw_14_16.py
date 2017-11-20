@@ -1,47 +1,52 @@
 import math
 #task_14
 #-------------------------------------------
-def parity_of_numeral (numeral):
-    if numeral / 2 == int(numeral / 2):
-        print(numeral)
+print('Is the numeral even?')
+
+def is_the_numeral_even(numeral):
+    if numeral % 2 == 0:
+        return True
     else:
-        print('Число нечетное')
+        return False
 
 
-result = parity_of_numeral(9)
+result = is_the_numeral_even(10)
+print(result)
 
 
 #task_15
 #-------------------------------------------
-print('Пересекаются ли две заданные окружности на плоскости?')
+print('Do two given circles intersect in the plane?')
 
-def circus_intersections (x1, x2, r1, y1, y2, r2):
+def is_circles_intersect (x1, x2, r1, y1, y2, r2):
     distance_between_centres = math.sqrt((y1 - x1)**2 + (y2 - x2)**2)
     sum_of_radiuses = r1 + r2
     if distance_between_centres > sum_of_radiuses:
-        print("Нет")
+        return False
     elif distance_between_centres < sum_of_radiuses:
-        print("Нет")
+        return False
     else:
-        print('Да')
+        return True
 
 
-result1 = circus_intersections(7, 8, 3, 8, 9, 5)
+result1 = is_circles_intersect(7, 8, 3, 8, 9, 5)
+print(result1)
 
 
 #task_16
 #---------------------------------------------
-print("Два поезда движутся с заданной скоростью. Между ними 10 км. Первый поезд через 4 км может свернуть с пути."
-      "Столкнутся ли поезда?")
+print("Two trains move at a given speed. Between them is 10 km. The first train can turn off the road after 4 km ."
+      "Will the trains collide?")
 
 
-def trains_crash (velocity1, velocity2):
+def is_the_trains_crash (velocity1, velocity2):
     square = 10
     time_train_1 = (10 - 6)/velocity1
     time_train_2 = (10 - 4)/velocity2
     if time_train_1 < time_train_2:
-        print('Поезда не столкнутся')
+        return False
     else:
-        print("Поезда столкнутся")
+        return True
 
-result2 = trains_crash(30, 60)
+result2 = is_the_trains_crash(30, 60)
+print(result2)
