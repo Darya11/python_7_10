@@ -29,7 +29,7 @@ def is_circles_intersect (x1, x2, r1, y1, y2, r2):
         return True
 
 
-result1 = is_circles_intersect(7, 8, 3, 8, 9, 5)
+result1 = is_circles_intersect(0, 0, 5, 0, 0, 4)
 print(result1)
 
 
@@ -40,9 +40,9 @@ print("Two trains move at a given speed. Between them is 10 km. The first train 
 
 
 def is_the_trains_crash (velocity1, velocity2):
-    square = 10
-    time_train_1 = (10 - 6)/velocity1
-    time_train_2 = (10 - 4)/velocity2
+    distance = 10
+    time_train_1 = (distance - 6)/velocity1
+    time_train_2 = (distance - 4)/velocity2
     if time_train_1 < time_train_2:
         return False
     else:
