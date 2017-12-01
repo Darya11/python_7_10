@@ -5,7 +5,6 @@ print(date_us)
 date_eu = date_us.split(".")
 print(date_eu[1] + '.' + date_eu[0] + '.' + date_eu[2])
 
-
 #task_8
 #------------------------------------------------
 name_surname = 'Mark Zuckerberg'
