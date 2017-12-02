@@ -32,9 +32,7 @@ print('The roots of the quadratic equation are: ', result)
 
 def sum_symbol_codes(first_unicode, last_unicode):
     total_sum = 0
-    first_unicode_number = ord(first_unicode)
-    last_unicode_number = ord(last_unicode)
-    for i in range(int(ord(first_unicode)), int(ord(last_unicode)) + 1):
+    for i in range(ord(first_unicode), ord(last_unicode) + 1):
         total_sum += i
 
     return total_sum
@@ -72,7 +70,7 @@ print('The total difference between random numerals %d' % result2[0],'and %d' % 
 
 def diff_even_odd(num_limit, lower_bound, upper_bound):
     sum_of_even = 0
-    sum_of_not_even = 0
+    sum_of_odd = 0
 
     for i in range(num_limit):
         random_number = random.randint(lower_bound, upper_bound)
@@ -81,13 +79,13 @@ def diff_even_odd(num_limit, lower_bound, upper_bound):
             sum_of_even += random_number
 
         else:
-            sum_of_not_even += random_number
+            sum_of_odd += random_number
 
-    return sum_of_even - sum_of_not_even
+    return sum_of_even - sum_of_odd
 
 
 result3 = diff_even_odd(100, 200, 850)
-print('The result of the difference between random generated even and not even numbers is', result3)
+print('The result of the difference between random generated even and odd numbers is', result3)
 
 
 
