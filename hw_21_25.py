@@ -91,3 +91,18 @@ def chess_reward():
 result = chess_reward()
 print('The number of cell from what the quantaty of corns is more million: %d' % result[0],
       ' and the total amount of corns is: %d' % result[1])
+
+
+#task_25
+#---------------------------------
+list_to_shuffle = [x for x in range(100) if x % 2 !=0]
+print(list_to_shuffle)
+
+def shuffle_list(list_to_shuffle):
+    list_of_random_idx = []
+    for elem in list_to_shuffle:
+        random_idx = random.randint(0, len(list_of_random_idx))
+        list_of_random_idx.insert(random_idx, elem)
+    return list_of_random_idx
+
+print(shuffle_list(list_to_shuffle))
