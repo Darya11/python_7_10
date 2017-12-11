@@ -43,16 +43,15 @@ while True:
          continue
 
     five_digit_number = int(five_digit_number)
-    lst = []
+    composition_of_odd = 1
     digit = five_digit_number
     full_number = five_digit_number
     while full_number > 0:
         digit = full_number % 10
         full_number = full_number // 10
         if digit % 2 != 0:
-            lst.append(digit)
-    sum_of_odd = sum(lst)
-    print('The sum of odd in your five-digit number is: %d' % sum_of_odd)
+            composition_of_odd *= digit
+    print('The composition of odd in your five-digit number is: %d' % composition_of_odd)
 
 
 
