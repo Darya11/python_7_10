@@ -1,3 +1,4 @@
+import random
 #task_5
 #--------------------------------------
 def nearest_number(digit_1, digit_2):
@@ -41,10 +42,10 @@ def sum_fibonacci(number_1, number_2):
     while len(lst) < 10:
             sum_of_elem = lst[-1] + lst[-2]
             lst.append(sum_of_elem)
-    return lst[-1]
+    return sum(lst)
 
 
-result = sum_fibonacci(0, 1)
+result = sum_fibonacci(1, 1)
 print('The sum of first ten fibonacci numbers is: %s' % result)
 
 
@@ -55,9 +56,7 @@ def sorted_list(list):
     max_elem = max(list)
     idx_min_elem = list.index(min_elem)
     idx_max_elem = list.index(max_elem)
-    b = list[idx_min_elem]
-    list[idx_min_elem] = list[idx_max_elem]
-    list[idx_max_elem] = b
+    list[idx_min_elem], list[idx_max_elem] = list[idx_max_elem], list[idx_min_elem]
     return list
 
 
@@ -74,13 +73,33 @@ def rationing(list):
     for i in list:
         module_number = abs(i)
         module_list.append(module_number)
-        max_number = max(module_list)
+    max_number = max(module_list)
+    for i in list:
         if max_number != 0:
             ration_number = i / max_number
             ration_list.append(ration_number)
     return list, ration_list
 
 
-result = rationing([-5, 3, 4])
+result = rationing([4, 3, -5])
 print(result)
 
+
+#task_12
+#---------------------------------
+def multiplication_equation():
+    multiplication_list = []
+    while len(multiplication_list) < 15:
+        i = random.randint(2, 9)
+        b = random.randint(2, 9)
+
+        multiplication_numbers = i * b
+        if multiplication_numbers not in multiplication_list:
+            multiplication_list.append(multiplication_numbers)
+            print(i, '*', b)
+
+    return multiplication_list
+
+
+result = multiplication_equation()
+print(result)
