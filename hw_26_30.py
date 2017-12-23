@@ -21,3 +21,20 @@ def calc_frequency(list_of_random_digits):
 
 result_1 = calc_frequency(list_of_random_digits)
 print(result_1)
+
+
+#task_30
+#------------------------------------
+def gen_primes():
+    list_of_numbers = []
+    for i in range(2, 101):
+            for j in list_of_numbers:
+                if i % j == 0:
+                    break
+            else:
+                list_of_numbers.append(i)
+    return list_of_numbers
+
+
+result_2 = gen_primes()
+print(result_2)
