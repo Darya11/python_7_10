@@ -13,12 +13,14 @@ def calc_frequency(list_of_random_digits):
     print('Frequency calculation of numbers in random list %s' % list_of_random_digits,'is: %s' % list_of_frequences)
     print('Max number of frequency is:')
 
-    for i in list_of_frequences:
-        if list_of_frequences[0] != list_of_frequences[1] and list_of_frequences[0] != list_of_frequences[2]\
-                and list_of_frequences[1] != list_of_frequences[2]:
-            return max(list_of_frequences)
-        else:
-            return None
+    if frequency_of_minus_1 > frequency_of_0 and frequency_of_minus_1 > frequency_of_1:
+        return frequency_of_minus_1
+    elif frequency_of_0 > frequency_of_minus_1 and frequency_of_0 > frequency_of_1:
+        return frequency_of_0
+    elif frequency_of_1 > frequency_of_minus_1 and frequency_of_1 > frequency_of_0:
+        return frequency_of_1
+
+
 
 
 result_1 = calc_frequency(list_of_random_digits)
