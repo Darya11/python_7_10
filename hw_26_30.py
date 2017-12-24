@@ -24,7 +24,26 @@ def calc_frequency(list_of_random_digits):
 result_1 = calc_frequency(list_of_random_digits)
 print(result_1)
 
+#task_28
+#-----------------------------------
+cipher_list = string.ascii_lowercase + string.digits
 
+str_to_encode = input().lower()
+
+def encode(str_to_encode):
+    cipter_str = ''
+
+    for i in str_to_encode:
+        if i not in cipher_list:
+            cipter_str += i
+            continue
+
+        j = (cipher_list.index(i) + 5) % len(cipher_list)
+        cipter_str += cipher_list[j]
+
+    return cipter_str
+
+print(encode(str_to_encode))
 #task_29
 #-----------------------------------
 
