@@ -93,8 +93,9 @@ def multiplication_equation():
         i = random.randint(2, 9)
         b = random.randint(2, 9)
 
+
         multiplication_numbers = i * b
-        if multiplication_numbers not in multiplication_list:
+        if i!=b and b !=i and multiplication_numbers not in multiplication_list:
             multiplication_list.append(multiplication_numbers)
             print(i, '*', b)
 
@@ -103,3 +104,4 @@ def multiplication_equation():
 
 result = multiplication_equation()
 print(result)
+
