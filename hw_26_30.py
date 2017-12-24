@@ -1,4 +1,6 @@
 import random
+import string
+
 list_of_random_digits = [random.randint(-1, 1) for x in range(11)]
 
 print('Random list is: %s' % list_of_random_digits)
@@ -21,6 +23,25 @@ def calc_frequency(list_of_random_digits):
 
 result_1 = calc_frequency(list_of_random_digits)
 print(result_1)
+
+
+#task_29
+#-----------------------------------
+
+def gen_password():
+    password = []
+    b = string.ascii_lowercase
+    c = string.ascii_uppercase + string.digits + '_'
+    d = string.digits + '_'
+
+
+    a_1 = ([password.append(random.choice(b)) for x in range(4) ])
+    a_2 = ([password.append(random.choice(c)) for x in range(4)])
+    a_3 = ([password.append(random.choice(d)) for x in range(2)])
+    return ''.join(password)
+
+
+print(gen_password())
 
 
 #task_30
