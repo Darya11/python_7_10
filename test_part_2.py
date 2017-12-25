@@ -84,6 +84,37 @@ def rationing(list):
 result = rationing([4, 3, -5])
 print(result)
 
+#task_10
+#----------------------------------------
+def saddle_points(matrix):
+    rowmins = []
+    rowmaxs = []
+    colmins = []
+    colmaxs = []
+
+    for i,row in enumerate(matrix):
+        min_row = min(row)
+        max_row = max(row)
+        for j,x in enumerate(row):
+            if x == min_row: rowmins.append((i,j))
+            if x == max_row: rowmaxs.append((i,j))
+
+    column_list = [list(column) for column in zip(*matrix)]
+
+    for j,column in enumerate(column_list):
+        min_column = min(column)
+        max_column = max(column)
+        for i,x in enumerate(column):
+            if x == min_column: colmins.append((i,j))
+            if x == max_column: colmaxs.append((i,j))
+
+
+    return (set(rowmins) & set(colmaxs)) | (set(rowmaxs) & set(colmins))
+
+
+matrix = [[3, 8, 7], [5, 9, 6], [2, 6, 7]]
+print(saddle_points(matrix))
+
 
 #task_12
 #---------------------------------
